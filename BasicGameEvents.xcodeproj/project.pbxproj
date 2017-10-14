@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		593FBB5C1F923CC30070A8D6 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 593FBB5B1F923CC30070A8D6 /* main.c */; };
+		593FBB641F923CF80070A8D6 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593FBB631F923CF80070A8D6 /* SDL2_image.framework */; };
+		593FBB661F923D010070A8D6 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593FBB651F923D010070A8D6 /* SDL2_mixer.framework */; };
+		593FBB681F923D080070A8D6 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593FBB671F923D080070A8D6 /* SDL2_ttf.framework */; };
+		593FBB6A1F923D110070A8D6 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593FBB691F923D110070A8D6 /* SDL2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,12 @@
 /* Begin PBXFileReference section */
 		593FBB581F923CC30070A8D6 /* BasicGameEvents */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BasicGameEvents; sourceTree = BUILT_PRODUCTS_DIR; };
 		593FBB5B1F923CC30070A8D6 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		593FBB631F923CF80070A8D6 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = BasicGameEvents/SDL2_image.framework; sourceTree = "<group>"; };
+		593FBB651F923D010070A8D6 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = BasicGameEvents/SDL2_mixer.framework; sourceTree = "<group>"; };
+		593FBB671F923D080070A8D6 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = BasicGameEvents/SDL2_ttf.framework; sourceTree = "<group>"; };
+		593FBB691F923D110070A8D6 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = BasicGameEvents/SDL2.framework; sourceTree = "<group>"; };
+		593FBB6B1F923D900070A8D6 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		593FBB6C1F923D9E0070A8D6 /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593FBB6A1F923D110070A8D6 /* SDL2.framework in Frameworks */,
+				593FBB681F923D080070A8D6 /* SDL2_ttf.framework in Frameworks */,
+				593FBB661F923D010070A8D6 /* SDL2_mixer.framework in Frameworks */,
+				593FBB641F923CF80070A8D6 /* SDL2_image.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +57,7 @@
 			children = (
 				593FBB5A1F923CC30070A8D6 /* BasicGameEvents */,
 				593FBB591F923CC30070A8D6 /* Products */,
+				593FBB621F923CF80070A8D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +73,21 @@
 			isa = PBXGroup;
 			children = (
 				593FBB5B1F923CC30070A8D6 /* main.c */,
+				593FBB6B1F923D900070A8D6 /* main.h */,
+				593FBB6C1F923D9E0070A8D6 /* define.h */,
 			);
 			path = BasicGameEvents;
+			sourceTree = "<group>";
+		};
+		593FBB621F923CF80070A8D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				593FBB691F923D110070A8D6 /* SDL2.framework */,
+				593FBB671F923D080070A8D6 /* SDL2_ttf.framework */,
+				593FBB651F923D010070A8D6 /* SDL2_mixer.framework */,
+				593FBB631F923CF80070A8D6 /* SDL2_image.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +261,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BasicGameEvents",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +273,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BasicGameEvents",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
